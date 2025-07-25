@@ -1,10 +1,11 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { PlatformColor, StyleSheet, Text, View } from 'react-native';
+import './src/styles/global.css'
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
+      <Text style={styles.primaryLabel}>I am Iron Man!</Text>
       <StatusBar style="auto" />
     </View>
   );
@@ -13,8 +14,13 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: PlatformColor('systemIndigo'), // ✅ dynamic background on iPhone
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  primaryLabel: {
+    color: PlatformColor('label'), // ✅ Apple: text label color
+    fontSize: 38,
+    fontWeight: '600',
   },
 });
