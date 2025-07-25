@@ -1,25 +1,52 @@
 .
-├── app.json
+├── android
+│   ├── app
+│   │   ├── build.gradle
+│   │   ├── debug.keystore
+│   │   ├── proguard-rules.pro
+│   │   └── src
+│   ├── build.gradle
+│   ├── gradle
+│   │   └── wrapper
+│   ├── gradle.properties
+│   ├── gradlew
+│   ├── gradlew.bat
+│   └── settings.gradle
 ├── App.tsx
 ├── assets
 │   ├── adaptive-icon.png
 │   ├── favicon.png
 │   ├── icon.png
 │   └── splash-icon.png
+├── babel.config.js
 ├── index.ts
-├── package.json
-├── package-lock.json
+├── ios
+│   ├── Podfile
+│   ├── ScoutProduction
+│   │   ├── AppDelegate.swift
+│   │   ├── Images.xcassets
+│   │   ├── Info.plist
+│   │   ├── ScoutProduction-Bridging-Header.h
+│   │   ├── ScoutProduction.entitlements
+│   │   ├── SplashScreen.storyboard
+│   │   └── Supporting
+│   └── ScoutProduction.xcodeproj
+│       ├── project.pbxproj
+│       ├── project.xcworkspace
+│       └── xcshareddata
+├── metro.config.js
+├── nativewind-env-d.ts
+├── nativewind-env.d.ts
 ├── project-structure.txt
 ├── src
 │   ├── components
-│   │   └── BackgroundVideo.tsx
+│   │   ├── BackgroundVideo.tsx
+│   │   └── LandingContent.tsx
 │   ├── screens
 │   │   └── LandingScreen.tsx
 │   ├── styles
 │   │   └── global.css
 │   └── utils
-├── tailwind.config.js
-└── tsconfig.json
+└── tailwind.config.js
 
-7 directories, 15 files
-https://www.scoutmotors.com/assets/videos/camp1015-vp9-chrome.webm
+19 directories, 31 files

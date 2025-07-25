@@ -1,26 +1,25 @@
 import { StatusBar } from 'expo-status-bar';
-import { PlatformColor, StyleSheet, Text, View } from 'react-native';
-import './src/styles/global.css'
+import { PlatformColor, StyleSheet, View } from 'react-native';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
+import LandingScreen from './src/screens/LandingScreen';
 
 export default function App() {
   return (
+  <SafeAreaProvider>
     <View style={styles.container}>
-      <Text style={styles.primaryLabel}>I am Iron Man!</Text>
       <StatusBar style="auto" />
+      <LandingScreen />
     </View>
+  </SafeAreaProvider>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: PlatformColor('systemIndigo'), // ✅ dynamic background on iPhone
+    backgroundColor: PlatformColor('systemIndigo'), 
     alignItems: 'center',
     justifyContent: 'center',
   },
-  primaryLabel: {
-    color: PlatformColor('label'), // ✅ Apple: text label color
-    fontSize: 38,
-    fontWeight: '600',
-  },
+  
 });
